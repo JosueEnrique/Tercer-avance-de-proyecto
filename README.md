@@ -1,6 +1,6 @@
 # Segundo-avance-de-proyecto
 
-#INTEGRANTES:
+# INTEGRANTES
 Josué Enrique Moreno Blanco u20240459 20%
 Yulian Ernaldo Perez Benavidez U20070018 20%
 Elvin Elisander Rivera Sorto U20231642 20%
