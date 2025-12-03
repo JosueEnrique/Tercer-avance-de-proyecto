@@ -1,18 +1,11 @@
 #include <iostream>
-#include <stack>
 #include <cmath>
 using namespace std;
 
-struct Movimiento {
-    int disco;
-    char desde;
-    char hacia;
-};
-
 void hanoiIterativo(int n, char origen, char destino, char auxiliar) {
-    stack<Movimiento> pila;
     int totalMovimientos = pow(2, n) - 1;
 
+    // Si el número de discos es par, se intercambian destino y auxiliar
     if (n % 2 == 0) swap(destino, auxiliar);
 
     for (int i = 1; i <= totalMovimientos; i++) {
@@ -25,4 +18,19 @@ void hanoiIterativo(int n, char origen, char destino, char auxiliar) {
         else
             cout << "Mover disco " << disco << " de " << auxiliar << " a " << destino << endl;
     }
+}
+
+int main() {
+    int discos;
+    cout << "Ingrese el número de discos: ";
+    cin >> discos;
+
+    if (discos <= 0) {
+        cout << "Número inválido de discos. Debe ser mayor que 0." << endl;
+    } else {
+        cout << "\n--- Movimientos (Iterativo) ---\n";
+        hanoiIterativo(discos, 'A', 'C', 'B');
+    }
+
+    return 0;
 }
